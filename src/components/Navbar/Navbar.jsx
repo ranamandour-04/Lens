@@ -1,6 +1,7 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 export default function Navbar() {
   return (
     <>
@@ -10,7 +11,7 @@ export default function Navbar() {
             {/* logo */}
             <div className="flex justify-center items-center gap-3">
               <div>
-                <img src="../../assets/logo.png" className="w-12 " alt="عدسة" />
+                <img src={logo} className="w-12 " alt="عدسة" />
               </div>
               <div>
                 <span className="font-semibold text-white text-lg">عدسة</span>
