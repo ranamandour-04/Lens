@@ -648,37 +648,34 @@ function App() {
   const { siteInfo, posts, categories } = data;
   const { social } = data.siteInfo;
 
-  const router = createBrowserRouter(
-    [
-      {
-        path: "/",
-        element: <RootLayout social={social} />,
-        children: [
-          {
-            index: true,
-            element: <Home data={posts} category={categories} />,
-          },
-          {
-            path: "blog",
-            element: <Blog data={posts} category={categories} />,
-          },
-          {
-            path: "blog/:id",
-            element: <BlogDetails data={posts} />,
-          },
-          {
-            path: "about",
-            element: <About />,
-          },
-          {
-            path: "*",
-            element: <NotFound />,
-          },
-        ],
-      },
-    ],
-    { basename: "/lens" },
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout social={social} />,
+      children: [
+        {
+          index: true,
+          element: <Home data={posts} category={categories} />,
+        },
+        {
+          path: "blog",
+          element: <Blog data={posts} category={categories} />,
+        },
+        {
+          path: "blog/:id",
+          element: <BlogDetails data={posts} />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ]);
   return (
     <>
       <RouterProvider router={router} />
