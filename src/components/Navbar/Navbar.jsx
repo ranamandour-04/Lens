@@ -10,7 +10,7 @@ export default function Navbar() {
             {/* logo */}
             <div className="flex justify-center items-center gap-3">
               <div>
-                <img src="/public/logo.png" className="w-12 " alt="عدسة" />
+                <img src="../../assets/logo.png" className="w-12 " alt="عدسة" />
               </div>
               <div>
                 <span className="font-semibold text-white text-lg">عدسة</span>
